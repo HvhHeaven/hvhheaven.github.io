@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HvHHeaven // Minecraft Anarchy</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #dcdcdc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 30px;
+        }
+
+        .logo-img {
+            max-width: 200px;
+            height: auto;
+            border: 1px solid #2a2a2a;
+            padding: 10px;
+            background-color: #0a0a0a;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #888888;
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .main-layout {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+        }
+
+        .sidebar-col {
+            display: table-cell;
+            width: 250px;
+            vertical-align: top;
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            padding: 20px;
+        }
+
+        .content-col {
+            display: table-cell;
+            vertical-align: top;
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            padding: 30px;
+        }
+
+        .navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation li {
+            margin-bottom: 10px;
+        }
+
+        .nav-btn {
+            display: block;
+            background-color: #111111;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #222222;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+
+        .nav-external {
+            background-color: #1a1a1a;
+            border-color: #333333;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        p {
+            font-size: 15px;
+            color: #b0b0b0;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #b0b0b0;
+        }
+
+        .status-box {
+            background-color: #111111;
+            border: 1px solid #222222;
+            padding: 20px;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .status-box .ip {
+            font-family: monospace;
+            font-size: 22px;
+            color: #ffffff;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .status-box .version {
+            font-size: 13px;
+            color: #888888;
+        }
+
+        .alert-box {
+            background-color: #161616;
+            border-left: 3px solid #ffffff;
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #444444;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Шапка с вечной ссылкой на логотип -->
+    <header>
+        <img src="https://i.postimg.cc/QxcCZWBV/Untitled62-20260427183126.png" alt="[ HvHHeaven Логотип ]" class="logo-img">
+        <h1>HvHHeaven</h1>
+        <p>Minecraft Anarchy Project</p>
+    </header>
+
+    <div class="main-layout">
+        
+        <!-- Левая колонка -->
+        <td class="sidebar-col">
+            <ul class="navigation">
+                <li><div class="nav-btn" onclick="switchTab('about')">О сервере</div></li>
+                <li><div class="nav-btn" onclick="switchTab('faq')">Зайти & FAQ</div></li>
+                <li><a href="https://dsc.gg" target="_blank" class="nav-btn nav-external">Discord Сервер</a></li>
+            </ul>
+        </td>
+
+        <!-- Правая колонка -->
+        <td class="content-col">
+
+            <!-- Страница: О сервере -->
+            <div id="tab-about" class="page-content active">
+                <h2>О проекте</h2>
+                <p>Добро пожаловать на <strong>HvHHeaven</strong> — уникальное пространство абсолютной свободы в Minecraft.</p>
+                <p>Наш сервер создан для игроков, которые ценят полную независимость от ограничений игрового процесса. Мы предлагаем уникальные условия:</p>
+                <ul>
+                    <li>Абсолютное отсутствие античита</li>
+                    <li>Полная анархия во всех её проявлениях</li>
+                    <li>Полный хаос на всей карте проекта</li>
+                    <li>Никаких правил и игровых запретов</li>
+                </ul>
+                <p>Используйте любые чит-клиенты, проверяйте надежность своих конфигураций и доминируйте над соперниками. Здесь решает только ваш опыт и настройки софта.</p>
+            </div>
+
+            <!-- Страница: Зайти & FAQ -->
+            <div id="tab-faq" class="page-content">
+                <h2>Зайти & FAQ</h2>
+                
+                <p>Для подключения к серверу используйте любой лаунчер.</p>
+                
+                <div class="status-box">
+                    <span class="ip">hvhheaven.falix.gg</span>
+                    <span class="version">Версия игры: 1.21.4-26.1.2</span>
+                </div>
+
+                <h2>Часто задаваемые вопросы</h2>
+                <p><strong>Разрешено ли использовать софт?</strong><br>
+                Да, сервер полностью адаптирован под игру с любыми модификациями и чит-клиентами.</p>
+
+                <p><strong>Как часто проходят вайпы?</strong><br>
+                Вайпы будут происходить максимально редко, насколько это возможно. Однако они неизбежны, так как со временем из-за огромного количества построек на диске хостинга переполняется свободное место.</p>
+
+                <p><strong>Что делать, если сервер отключен?</strong><br>
+                Поскольку сервер хостится на бесплатной платформе Falix, он может уходить в спящий режим. Перейдите в наш <a href="https://dsc.gg" target="_blank">Discord Сервер</a>, найдите текстовый канал <strong>#запуск</strong> и включите его, перейдя по закрепленной там специальной ссылке запуска.</p>
+                
+                <div class="alert-box">
+                    <strong>Примечание:</strong> панель управления хостингом работают стабильно только при включенном <strong>VPN</strong>. Если страница запуска выдает ошибку, активируйте VPN и обновите вкладку.
+                </div>
+
+                <p><strong>Существуют ли баны?</strong><br>
+                Игровой процесс полностью не модерируется. Единственное жесткое табу — это любые попытки нанести технический вред оборудованию или хостингу (DDoS-атаки, попытки краша ядра сервера).</p>
+            </div>
+
+        </td>
+    </div>
+
+    <footer>
+        © 2026 Проект HvHHeaven. Все права защищены.
+    </footer>
+
+</div>
+
+<script>
+    function switchTab(tabId) {
+        const tabs = document.querySelectorAll('.page-content');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        const targetTab = document.getElementById('tab-' + tabId);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
